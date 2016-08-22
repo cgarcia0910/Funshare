@@ -76,7 +76,7 @@ ion-nav-view {
 #map {
   display: block;
   width: 100vw;
-  height: calc(100vh - 190px);
+  height: 100%;
   float: left;
 }
 .search-driver {

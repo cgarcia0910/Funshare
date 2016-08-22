@@ -1,0 +1,7 @@
+[
+  {"userId": "0", "routeId": "0", "userName": "Adam", "remainingTime": "10", "remainingDistance": "150", "affinity": "5", "photoUrl": "img/adam.jpg"},
+  {"userId": "1", "routeId": "1", "userName": "Adam", "remainingTime": "10", "remainingDistance": "150", "affinity": "5", "photoUrl": "img/adam.jpg"},
+  {"userId": "2", "routeId": "2", "userName": "Adam", "remainingTime": "10", "remainingDistance": "150", "affinity": "5", "photoUrl": "img/adam.jpg"},
+  {"userId": "3", "routeId": "3", "userName": "Adam", "remainingTime": "10", "remainingDistance": "150", "affinity": "5", "photoUrl": "img/adam.jpg"},
+  {"userId": "4", "routeId": "4", "userName": "Adam", "remainingTime": "10", "remainingDistance": "150", "affinity": "5", "photoUrl": "img/adam.jpg"}
+]

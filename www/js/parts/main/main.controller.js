@@ -89,6 +89,11 @@
       });
     });
     self.searchDrivers = function () {
-      $state.go('main.routes', {});
+      $state.go('main.routes', {
+        startLat: self.starterPosition.lat(),
+        startLng: self.starterPosition.lng(),
+        endLat: self.destinationPosition.lat(),
+        endLng: self.destinationPosition.lng()
+      });
     }
   });

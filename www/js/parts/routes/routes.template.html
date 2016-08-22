@@ -1,58 +1,45 @@
 <ion-scroll zooming="true" direction="xy" style="width: 100%; height: 92vh">
 <div class="list">
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/adam.jpg">
-    <h2>Adam </h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
+  <!--
+  <div class="card">
+    <div class="item item-text-wrap">
+            <div class="tabs-striped tabs-color-positive">
+              <h1>{{rc.idRouteSelected}}</h1>
+              <img src="img/adam.jpg" height="200px"/></div>
+
+      <div class="tabs">
+        <a ng-class="{'tab-item active': ($location.$$path == '/main/walker'), 'tab-item': !($location.$$path == '/main/walker')}" href="#">
+          <i class="icon ion-map"></i>
+        </a>
+        <a ng-class="{'tab-item active': ($location.$$path == '/main/driver'), 'tab-item': !($location.$$path == '/main/driver')}" href="#">
+          <i class="icon ion-model-s"></i>
+        </a>
+        <a ng-class="{'tab-item active': ($location.$$path == '/main/driver'), 'tab-item': !($location.$$path == '/main/driver')}" href="#">
+          <i class="icon ion-person"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  -->
+  <div ng-repeat="route in rc.routes">
+  <a class="item item-thumbnail-left" ng-href="#/main/routes"  ng-click="rc.idRouteSelected = route.routeId">
+    <img src="{{route.photoUrl}}">
+    <h2>{{route.userName}} </h2>
+    <p>pasa en {{route.remainingTime}} min a {{route.remainingDistance}} m</p>
+    <p>afinidad {{route.affinity}}</p>
   </a>
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/ben.png">
-    <h2>Ben</h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
-  </a>
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/perry.png">
-    <h2>Perry</h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
-  </a>
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/adam.jpg">
-    <h2>Adam </h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
-  </a>
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/ben.png">
-    <h2>Ben</h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
-  </a>
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/perry.png">
-    <h2>Perry</h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
-  </a>
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/adam.jpg">
-    <h2>Adam </h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
-  </a>
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/ben.png">
-    <h2>Ben</h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
-  </a>
-  <a class="item item-thumbnail-left" href="#">
-    <img src="img/perry.png">
-    <h2>Perry</h2>
-    <p>pasa en 10 min a 150m</p>
-    <p>afinidad 5</p>
-  </a>
+    <div class="row">
+      <div class="col col-50">
+        <button class="button button-block button-positive">
+          <i class="icon ion-ios-eye"></i>
+        </button>
+      </div>
+      <div class="col col-50">
+        <button class="button button-block button-positive">
+          <i class="icon ion-checkmark-round"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 </ion-scroll>

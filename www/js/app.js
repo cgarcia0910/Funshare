@@ -42,8 +42,16 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'ngLodash',
   })
   .state('main.routes', {
     url: '/routes',
+    params: {
+      startLat: null,
+      startLng: null,
+      endLat: null,
+      endLng: null
+    },
     views: {
       'tabContent': {
+        controller: 'routes-controller',
+        controllerAs: 'rc',
         //controller: 'routes-controller',
         //controllerAs: 'rc',
         templateUrl: 'js/parts/routes/routes.template.html'

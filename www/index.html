@@ -39,9 +39,12 @@
 
     <script src="js/parts/main/main.controller.js"></script>
 
+    <script src="js/parts/routes/routes.controller.js"></script>
+    <script src="js/parts/routes/routes.factory.js"></script>
 
   </head>
   <body ng-app="starter">
+  <!--
   <ion-side-menus enable-menu-with-back-views="false">
 
     <ion-side-menu-content>
@@ -54,16 +57,18 @@
           </button>
         </ion-nav-buttons>
       </ion-nav-bar>
-      <ion-nav-view></ion-nav-view>
+      <ion-content> -->
+        <ion-nav-view></ion-nav-view> <!--
+      </ion-content>
     </ion-side-menu-content>
 
     <ion-side-menu side="left">
       <ion-header-bar class="bar-assertive">
         <h1 class="title">Left Menu</h1>
       </ion-header-bar>
+
       <ion-content>
         <ul class="list">
-          <!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
           <a href="#/event/check-in" class="item" menu-close>Check-in</a>
           <a href="#/event/attendees" class="item" menu-close>Attendees</a>
         </ul>
@@ -71,5 +76,6 @@
     </ion-side-menu>
 
   </ion-side-menus>
+-->
   </body>
 </html>
