@@ -1,0 +1,11 @@
+  <p>{{passValid}}</p>
+  <label class="item item-input">
+    <input type="password" ng-model="password" placeholder="password">
+    <i ng-if="password !='' && passValid" class="icon ion-checkmark-circled placeholder-icon"></i>
+    <i ng-if="password !='' && confPassword != '' && !passValid" class="icon ion-close-circled placeholder-icon"></i>
+  </label>
+  <label class="item item-input">
+    <input type="password" ng-model="confPassword" placeholder="confirmar contraseña">
+    <i ng-if="confPassword != 'undefined' && password !='undefined' && password == confPassword" class="icon ion-checkmark-circled placeholder-icon"></i>
+    <i ng-if="password !='' && confPassword != '' && password != confPassword" class="icon ion-close-circled placeholder-icon"></i>
+  </label>

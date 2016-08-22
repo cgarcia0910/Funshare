@@ -1,0 +1,84 @@
+.preferences ul {
+  width: 50%;
+  float: left;
+  height: auto;
+}
+.item-input {
+  background-color:transparent;
+  border-color: transparent;
+  border-width: 2px;
+  border-bottom-color: whitesmoke;
+}
+.item-input input {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+#logo {
+  margin: auto;
+}
+
+ion-nav-view {
+  background-color: #00b8d4;
+}
+.body {
+  background-image: url("img/Freedom.jpg");
+}
+.login {
+  background-image: url("../img/Freedom.jpg");
+}
+
+.login-panel {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.pane
+{
+  background-color: #0a9dc7;
+  background-image: url("../img/Freedom.jpg");
+}
+.tabs .tab-item{
+  background-color: transparent;
+  //background-image: url("img/Freedom.jpg");
+}
+
+.Autocomplete {
+  width: calc(100% - 4rem);
+  float: left;
+  background-color: transparent;
+  color: whitesmoke;
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-width:2px;
+  border-bottom-color: whitesmoke;
+}
+.auto-container.ion-home {
+  float: left;
+}
+.auto-container {
+  /*background-color: #0D3349;*/
+  width: 100vw;
+  display: block;
+  float: left;
+}
+.Autocomplete::-webkit-input-placeholder{
+  color: whitesmoke;
+}
+
+.button.icon {
+  background-color: transparent;
+  width: 2rem;
+  float: left;
+  margin: 0;
+}
+#map {
+  display: block;
+  width: 100vw;
+  height: calc(100vh - 190px);
+  float: left;
+}
+.search-driver {
+  margin: 0;
+}

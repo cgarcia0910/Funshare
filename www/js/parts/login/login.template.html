@@ -1,0 +1,22 @@
+<div class="login">
+<div class="login-panel" ng-controller="login-controller">
+  <div class="card" ng-hide="errorMsg == ''">
+    <div class="item item-text-wrap">
+      {{errorMsg}}
+    </div>
+  </div>
+  <label class="item item-input">
+    <input type="text" placeholder="Usuario" class="input-login" ng-model="user" ng-keypress="errorMsg = ''">
+  </label>
+  <label class="item item-input">
+    <input type="password" placeholder="Contraseña" class="input-login" ng-model="password" ng-keydown="errorMsg = ''">
+  </label>
+  <button class="button button-block button-positive" class="input-login" ng-click="login()">
+    INICIAR SESION
+  </button>
+  <a href="#">¿Olvidaste tu contraseña?</a>
+  <button class="button button-block button-positive" class="input-login">
+    CREAR CUENTA EN FUNSHARE
+  </button>
+</div>
+</div>
