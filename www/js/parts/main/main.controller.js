@@ -2,9 +2,11 @@
  * Created by carlos on 16/08/16.
  */
 
-  app.controller('main-controller', function($scope, reverseGeocode, $ionicPopup, $cordovaGeolocation, $state) {
+  app.controller('main-controller', [ '$scope', 'reverseGeocode', '$ionicPopup', '$cordovaGeolocation', '$state', '$http', 'loginFactory', 'mainFactory', function($scope, reverseGeocode, $ionicPopup, $cordovaGeolocation, $state, $http, loginFactory, mainFactory) {
+
     var geocoder = new google.maps.Geocoder();
     var self = this;
+    self.routePolyline = {};
     self.starterPosition = {};
     self.starterFormatedAddress = "";
     self.destinationPosition = {};
@@ -89,11 +91,50 @@
       });
     });
     self.searchDrivers = function () {
+      /*
+      var url = 'https://maps.googleapis.com/maps/api/directions/json?';
+      var apiKEY = 'AIzaSyC913pMi9p3sVW0Km_yATPIsueWNf0Bp5A&mode=driving';
+      $http({
+        method: 'GET',
+        url: url + 'origin='+self.starterPosition.lat()+','+self.starterPosition.lng()+'&destination='+self.destinationPosition.lat()+','+self.destinationPosition.lng()+'&key='+apiKEY,
+        header: {
+          'Access-Control-Allow-Origin': "https://maps.googleapis.com/maps/api/directions/json"
+        }
+      }).then(function(response){
+        var points = response.data.routes[0].legs[0].steps;
+        var cleanPoints = [];
+        angular.forEach (points, function (value, key) {
+          cleanPoints.push(value.start_location);
+          cleanPoints.push(value.end_location);
+          //console.log(value);
+        });
+        self.routePolyline = new google.maps.Polyline({
+          path: cleanPoints,
+          //geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+        self.routePolyline.setMap(self.map);
+      });*/
+      mainFactory.getRoute(self.starterPosition.lat(), self.starterPosition.lng(), self.destinationPosition.lat(), self.destinationPosition.lng()).then(function (response) {
+        self.routePolyline = new google.maps.Polyline({
+          path: response,
+          //geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+        self.routePolyline.setMap(self.map);
+      });
+
+      /*
       $state.go('main.routes', {
         startLat: self.starterPosition.lat(),
         startLng: self.starterPosition.lng(),
         endLat: self.destinationPosition.lat(),
         endLng: self.destinationPosition.lng()
       });
+      */
     }
-  });
+  }]);

@@ -6,7 +6,6 @@
 // 'starter.controllers' is found in controllers.js
 //, 'ngCordova', 'AngularReverseGeocode', 'ngCordova.plugins.geolocation', 'ngCordova.plugins.backgroundGeolocation'
 var app = angular.module('starter', ['ionic', 'starter.controllers', 'ngLodash', 'ui.router', 'ngCordova', 'AngularReverseGeocode', 'ngCordova.plugins.geolocation'])
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -20,6 +19,7 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'ngLodash',
     .state('login', {
     url: '/login',
     templateUrl: 'js/parts/login/login.template.html'
+      //template: 'js/parts/login/login.template.html'
   })
 
   .state('main', {

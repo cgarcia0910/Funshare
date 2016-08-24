@@ -3,6 +3,7 @@
  */
 app.controller('login-controller', ['$scope', '$state', 'loginFactory', function ($scope, $state, loginFactory) {
   var pl = $scope;
+  $state.go('main.walker', {});
   pl.errorMsg = '';
   pl.userData = {};
   pl.login = function () {
