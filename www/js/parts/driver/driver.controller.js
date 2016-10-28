@@ -2,7 +2,7 @@
  * Created by carlos on 16/08/16.
  */
 
-  app.controller('main-controller', [ '$scope', 'reverseGeocode', '$ionicPopup', '$cordovaGeolocation', '$state', '$http', 'loginFactory', 'mainFactory', function($scope, reverseGeocode, $ionicPopup, $cordovaGeolocation, $state, $http, loginFactory, mainFactory) {
+  app.controller('driver-controller', [ '$scope', 'reverseGeocode', '$ionicPopup', '$cordovaGeolocation', '$state', '$http', 'loginFactory', 'driverFactory', function($scope, reverseGeocode, $ionicPopup, $cordovaGeolocation, $state, $http, loginFactory, driverFactory) {
 
     var geocoder = new google.maps.Geocoder();
     var self = this;
@@ -117,7 +117,7 @@
         });
         self.routePolyline.setMap(self.map);
       });*/
-      mainFactory.getRoute(self.starterPosition.lat(), self.starterPosition.lng(), self.destinationPosition.lat(), self.destinationPosition.lng()).then(function (response) {
+      driverFactory.getRoute(self.starterPosition.lat(), self.starterPosition.lng(), self.destinationPosition.lat(), self.destinationPosition.lng()).then(function (response) {
         self.routePolyline = new google.maps.Polyline({
           path: response,
           //geodesic: true,

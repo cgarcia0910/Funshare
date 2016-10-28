@@ -1,0 +1,12 @@
+  <!-- tab content -->
+    <div class="auto-container">
+    <button class="button icon ion-home"></button>
+
+    <input type="text" class="Autocomplete" id="starterAddress" placeholder="Introduzca su dirección de salida" ng-model="mcon.starterFormatedAddress">
+      </div>
+    <div class="auto-container">
+    <button class="button icon ion-map"></button>
+      <input type="text" class="Autocomplete" id="destinationAddress" placeholder="Introduzca su dirección de destino" ng-model="mcon.destinationFormatedAddress">
+      </div>
+    <button class="button button-block button-positive search-driver" ng-click="mcon.searchDrivers()">BUSCAR CONDUCTOR</button>
+    <div id="map" data-tap-disabled="true"></div>
